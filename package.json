@@ -1,0 +1,46 @@
+{
+  "name": "x402-preflight",
+  "version": "0.1.0",
+  "description": "Catch the silent-fail landmines in your x402 payment config before you deploy — network/CAIP-2 mismatch, the EIP-712 USDC domain-name trap, testnet/mainnet asset mix-ups, facilitator capability, and sub-cent price economics.",
+  "keywords": [
+    "x402",
+    "preflight",
+    "lint",
+    "config-check",
+    "payments",
+    "micropayments",
+    "usdc",
+    "base",
+    "eip-3009",
+    "eip-712",
+    "ai-agents",
+    "cloudflare-workers",
+    "facilitator"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "x402-preflight": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gareth1953/x402-preflight.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}

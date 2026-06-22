@@ -1,0 +1,11 @@
+{
+  "x402Version": 1,
+  "scheme": "exact",
+  "network": "eip155:8453",
+  "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "assetName": "USDC",
+  "assetVersion": "2",
+  "facilitatorUrl": "https://x402.org/facilitator",
+  "price": "$0.001",
+  "payTo": "0x91e439852d308dAed7f805d3504BA4d45ea4fA68"
+}
