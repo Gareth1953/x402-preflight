@@ -1,5 +1,10 @@
 # x402-preflight
 
+[![npm version](https://img.shields.io/npm/v/x402-preflight.svg)](https://www.npmjs.com/package/x402-preflight)
+[![license](https://img.shields.io/npm/l/x402-preflight.svg)](https://github.com/Gareth1953/x402-preflight/blob/main/LICENSE)
+[![CI](https://github.com/Gareth1953/x402-preflight/actions/workflows/ci.yml/badge.svg)](https://github.com/Gareth1953/x402-preflight/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6.svg)](https://www.typescriptlang.org/)
+
 **Catch the silent-fail landmines in your x402 payment config — before you deploy.**
 
 The painful thing about x402 misconfigurations is that they fail **silently**: no error, just payments that never settle and a debugging session that eats your afternoon. `x402-preflight` checks a config against the traps that actually bite — pulled from real, on-chain-verified experience taking an x402 service to Base mainnet.
