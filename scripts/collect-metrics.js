@@ -10,6 +10,7 @@ const summaryPath = path.join(metricsDir, "latest-summary.md");
 
 const repo = "Gareth1953/x402-preflight";
 const packageName = "x402-preflight";
+const replaceToday = process.argv.includes("--replace-today");
 const csvHeader =
   "date,github_stars,github_forks,github_watchers,open_issues,npm_weekly_downloads,comments,useful_questions,reported_real_issue,recommendation,notes";
 
@@ -103,6 +104,19 @@ async function ensureCsvExists() {
   return initial;
 }
 
+function updateCsv(csv, row, date, shouldReplaceToday) {
+  const lines = csv.split(/\r?\n/).filter((line) => line.length > 0);
+  const header = lines[0] === csvHeader ? lines[0] : csvHeader;
+  const existingRows = lines[0] === csvHeader ? lines.slice(1) : lines;
+
+  if (!shouldReplaceToday) {
+    return `${[header, ...existingRows, row].join("\n")}\n`;
+  }
+
+  const filteredRows = existingRows.filter((existingRow) => !existingRow.startsWith(`${date},`));
+  return `${[header, ...filteredRows, row].join("\n")}\n`;
+}
+
 function summaryMarkdown(metrics, level, recommendation, notes) {
   return `# Project 2 Metrics Summary
 
@@ -191,11 +205,11 @@ async function main() {
     .map(csvEscape)
     .join(",");
 
-  const separator = csv.endsWith("\n") ? "" : "\n";
-  await writeFile(csvPath, `${csv}${separator}${row}\n`, "utf8");
+  await writeFile(csvPath, updateCsv(csv, row, metrics.date, replaceToday), "utf8");
   await writeFile(summaryPath, summaryMarkdown(metrics, level, recommendation, fetchNotes), "utf8");
 
   console.log(`Metrics collected for ${repo}`);
+  console.log(`CSV mode: ${replaceToday ? "replace today" : "append"}`);
   console.log(`Signal level: ${level}`);
   console.log(`Recommendation: ${recommendation}`);
 }
