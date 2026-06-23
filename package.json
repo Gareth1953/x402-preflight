@@ -43,6 +43,7 @@
     "build": "tsc",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
+    "prepare:distribution": "node scripts/prepare-distribution.js",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
