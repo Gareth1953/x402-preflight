@@ -2,23 +2,21 @@
 
 ## Current Status
 
-Local metrics tracking is prepared for x402-preflight distribution measurement.
+Local metrics collection has run for x402-preflight using public GitHub and npm endpoints where available.
 
-No public posting, npm publishing, paid feature release, or external promotion has been performed from this metrics pack.
+No public posting, npm publishing, paid feature release, or external promotion has been performed by this metrics script.
 
-## Baseline Metrics
+## Latest Metrics
 
-Baseline metrics should be recorded before any Gareth-approved public distribution action.
-
-- Date:
-- GitHub stars:
-- GitHub forks:
-- GitHub watchers:
-- Open issues:
-- npm weekly downloads:
-- Comments:
-- Useful questions:
-- Reported real issue:
+- Date: 2026-06-23
+- GitHub stars: 0
+- GitHub forks: 0
+- GitHub watchers/subscribers: 0
+- Open issues: 0
+- npm weekly downloads: unknown
+- Comments: unknown
+- Useful questions: unknown
+- Reported real issue: unknown
 
 ## Signal Level
 
@@ -32,10 +30,12 @@ Signal definitions:
 
 ## Recommended Next Action
 
-Record baseline metrics before any external sharing.
+Do not broaden distribution yet; record baseline data and wait for Gareth-approved, low-noise sharing.
 
-After Gareth approval, share only one tailored post in one suitable community, then track response quality for seven days.
+## Approval Gate
 
-## Approval Note
+No public posting, npm publish, paid feature, or GLIRN crossover without Gareth approval.
 
-No public action without Gareth approval.
+## Notes
+
+GitHub repo metrics fetched. npm weekly downloads unknown: 404 Not Found Manual community comments, useful questions, and reported real issues remain unknown until Gareth records them.
