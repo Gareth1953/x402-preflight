@@ -8,19 +8,19 @@ No public posting, npm publishing, paid feature release, or external promotion h
 
 ## Latest Metrics
 
-- Date: 2026-06-23
+- Date: 2026-06-24
 - GitHub stars: 0
 - GitHub forks: 0
 - GitHub watchers/subscribers: 0
 - Open issues: 0
-- npm weekly downloads: unknown
+- npm weekly downloads: 121
 - Comments: unknown
 - Useful questions: unknown
 - Reported real issue: unknown
 
 ## Signal Level
 
-Current signal level: weak
+Current signal level: strong
 
 Signal definitions:
 
@@ -30,7 +30,7 @@ Signal definitions:
 
 ## Recommended Next Action
 
-Do not broaden distribution yet; record baseline data and wait for Gareth-approved, low-noise sharing.
+Keep sharing only with Gareth-approved, relevant builder communities; prioritise useful issues and requested checks before adding scope.
 
 ## Approval Gate
 
@@ -38,4 +38,4 @@ No public posting, npm publish, paid feature, or GLIRN crossover without Gareth 
 
 ## Notes
 
-GitHub repo metrics fetched. npm weekly downloads unknown: 404 Not Found Manual community comments, useful questions, and reported real issues remain unknown until Gareth records them.
+GitHub repo metrics fetched. npm weekly downloads fetched. Manual community comments, useful questions, and reported real issues remain unknown until Gareth records them.
