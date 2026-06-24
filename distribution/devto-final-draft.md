@@ -1,5 +1,3 @@
-# x402 configs can fail silently. I made a small preflight checker for the easy-to-miss details.
-
 When working with x402 payment configs, some of the most frustrating failures are not loud implementation errors.
 
 They are small configuration mismatches that look plausible in review, but cause the payment flow to fail quietly or waste a lot of debugging time.
