@@ -153,11 +153,11 @@ npx x402-preflight check ./config.json --live
 
 GitHub:
 
-`[GitHub link placeholder]`
+https://github.com/Gareth1953/x402-preflight
 
 npm:
 
-`[npm link placeholder]`
+https://www.npmjs.com/package/x402-preflight
 
 ## Feedback wanted
 
