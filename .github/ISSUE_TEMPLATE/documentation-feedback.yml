@@ -1,0 +1,87 @@
+name: Documentation or clarity feedback
+description: Report unclear documentation, messages, examples, or terminology.
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make x402-preflight clearer. Remove secrets and sensitive values from any examples.
+  - type: textarea
+    id: unclear
+    attributes:
+      label: What is unclear?
+      description: Link to the relevant section or paste the message or example.
+    validations:
+      required: true
+  - type: input
+    id: x402-version
+    attributes:
+      label: x402 version
+      description: Provide the version if relevant and known.
+      placeholder: "For example: v1, v2, unknown, or not applicable"
+  - type: input
+    id: network
+    attributes:
+      label: Network
+      description: Provide the network if relevant.
+      placeholder: "For example: base, eip155:8453, unknown, or not applicable"
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Network environment
+      options:
+        - Mainnet
+        - Testnet
+        - Unknown
+        - Not applicable
+    validations:
+      required: true
+  - type: input
+    id: asset
+    attributes:
+      label: Asset or token
+      description: Provide the asset or token if relevant.
+      placeholder: "For example: USDC or not applicable"
+  - type: input
+    id: facilitator
+    attributes:
+      label: Facilitator URL
+      description: Provide the URL if relevant.
+      placeholder: "https://... or not applicable"
+  - type: dropdown
+    id: config-format
+    attributes:
+      label: Config format
+      options:
+        - JSON
+        - wrangler.toml
+        - Not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour or wording
+      description: What did you expect the documentation or output to explain?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output or wording
+      description: What did you see instead?
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: ci
+    attributes:
+      label: Is this related to CI usage?
+      options:
+        - "Yes"
+        - "No"
+        - Unsure
+    validations:
+      required: true

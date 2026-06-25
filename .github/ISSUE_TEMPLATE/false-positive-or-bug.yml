@@ -1,0 +1,88 @@
+name: Report a false positive or bug
+description: Report incorrect, unclear, or unexpected x402-preflight output.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please remove secrets, private keys, and sensitive addresses from all examples.
+  - type: input
+    id: x402-version
+    attributes:
+      label: x402 version
+      description: Provide the version if known.
+      placeholder: "For example: v1, v2, or unknown"
+  - type: input
+    id: network
+    attributes:
+      label: Network
+      placeholder: "For example: base or eip155:8453"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Network environment
+      options:
+        - Mainnet
+        - Testnet
+        - Unknown
+    validations:
+      required: true
+  - type: input
+    id: asset
+    attributes:
+      label: Asset or token
+      placeholder: "For example: USDC and its address, if relevant"
+    validations:
+      required: true
+  - type: input
+    id: facilitator
+    attributes:
+      label: Facilitator URL
+      description: Provide the URL if it is relevant to the problem.
+      placeholder: "https://..."
+  - type: dropdown
+    id: config-format
+    attributes:
+      label: Config format
+      options:
+        - JSON
+        - wrangler.toml
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Sanitized config
+      description: Paste the smallest config that reproduces the issue, with secrets and sensitive values removed.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What did you expect x402-preflight to report?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+      description: Paste the complete relevant output.
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: ci
+    attributes:
+      label: Are you using or planning to use x402-preflight in CI?
+      options:
+        - "Yes"
+        - "No"
+        - Unsure
+    validations:
+      required: true

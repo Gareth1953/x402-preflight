@@ -81,6 +81,24 @@ if (hasFailures(findings)) process.exit(1);
 
 x402-preflight catches **configuration** landmines that fail silently. It does **not** audit your x402 *implementation*, your smart contracts, or your signing code — it checks that the config you're about to ship is internally coherent and matches the known on-chain facts. Currently focused on **Base / EVM USDC**; the knowledge base is small and explicit (see `src/knowledge.ts`) and easy to extend via PR.
 
+## Request a check or report a false positive
+
+If you hit an x402 configuration mistake that this tool should check, or an existing check produces a false positive, [open a GitHub issue](https://github.com/Gareth1953/x402-preflight/issues/new/choose).
+
+Include the network, asset, facilitator when relevant, config format, a minimal config snippet with secrets removed, expected behaviour, and actual output. Also note whether the issue is mainnet or testnet and whether the check would be useful in CI.
+
+Useful repeated requests may guide future checks, but not every request will be implemented. See [known limitations](docs/known-limitations.md) for more detail.
+
+## Limits
+
+- `x402-preflight` is not an audit.
+- It does not guarantee payment settlement.
+- It does not replace production testing.
+- It does not audit smart contracts.
+- It does not verify your signing implementation.
+- It does not provide legal or compliance advice.
+- It checks only known, explicit configuration issues.
+
 ## License
 
 MIT © Gareth1953

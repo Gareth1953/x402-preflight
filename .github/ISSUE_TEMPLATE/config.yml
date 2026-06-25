@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: x402-preflight known limitations
+    url: https://github.com/Gareth1953/x402-preflight/blob/main/docs/known-limitations.md
+    about: Review what x402-preflight does and does not check before opening an issue.

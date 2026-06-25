@@ -1,0 +1,88 @@
+name: Request a new x402 check
+description: Suggest a repeatable x402 configuration mistake that preflight could detect.
+title: "[Check request]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a check. Please remove secrets, private keys, and sensitive addresses before sharing configuration.
+
+        Requests help identify useful future checks, but submitting one does not guarantee implementation.
+  - type: input
+    id: x402-version
+    attributes:
+      label: x402 version
+      description: Provide the version if known.
+      placeholder: "For example: v1, v2, or unknown"
+  - type: input
+    id: network
+    attributes:
+      label: Network
+      placeholder: "For example: base or eip155:8453"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Network environment
+      options:
+        - Mainnet
+        - Testnet
+        - Unknown
+    validations:
+      required: true
+  - type: input
+    id: asset
+    attributes:
+      label: Asset or token
+      placeholder: "For example: USDC and its address, if relevant"
+    validations:
+      required: true
+  - type: input
+    id: facilitator
+    attributes:
+      label: Facilitator URL
+      description: Provide the URL if a facilitator is involved.
+      placeholder: "https://..."
+  - type: dropdown
+    id: config-format
+    attributes:
+      label: Config format
+      options:
+        - JSON
+        - wrangler.toml
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Sanitized config
+      description: Paste the smallest useful config example with secrets and sensitive values removed.
+      render: text
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What should x402-preflight detect or explain?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+      description: What does x402-preflight currently report?
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: ci
+    attributes:
+      label: Would you use this check in CI?
+      options:
+        - "Yes"
+        - "No"
+        - Unsure
+    validations:
+      required: true
