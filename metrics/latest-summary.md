@@ -13,7 +13,7 @@ No public posting, npm publishing, paid feature release, or external promotion h
 - GitHub forks: 0
 - GitHub watchers/subscribers: 0
 - Open issues: 0
-- npm weekly downloads: 128
+- npm weekly downloads: 131
 - Comments: unknown
 - Useful questions: unknown
 - Reported real issue: unknown
